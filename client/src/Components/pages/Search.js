@@ -9,14 +9,22 @@ import Welcome from './Welcome';
 import Auth from '../../utils/auth'; 
 
 import styled from 'styled-components'
-import { Link } from 'react-router-dom';
 import { SEARCH_ADDRESS } from '../../utils/queries';
 
 const Button = styled.button`
-    background: green;
     color: white;
     margin: 0 1em;
     padding: 0.25em 1em;
+    border-color: transparent;
+    border-radius: 5px
+`
+const SubmitBtn = styled(Button)`
+    background: green;
+`
+
+const LinkBtn = styled(Button)`
+    background: #0d6efd;
+    padding: 0.5em 1em;
 `
 
 const Search = props => {
@@ -43,11 +51,6 @@ const Search = props => {
     const updateAddress = async (e) => {
         e.preventDefault();
         searchAddress()
-        setAddressOne('')
-        setAddressTwo('')
-        setSuburb('')
-        setStateTerritory('')
-        setPostCode('')
         window.location.href ='/saved';
         return
         }
@@ -97,7 +100,6 @@ const Search = props => {
                         <h1 style={styles.marginTop}>Search Address</h1>
 
                             <Form onSubmit={updateAddress}>
-
                                 <Form.Group className="mb-3" controlId="formGridAddress1">
                                     <Form.Label>Address line 1</Form.Label>
                                     <Form.Control 
@@ -153,15 +155,13 @@ const Search = props => {
                                     </Form.Group>
                                 </Row>
 
-                                <Button type="submit">
+                                <SubmitBtn type="submit">
                                     Submit
-                                </Button>
+                                </SubmitBtn>
+                                <LinkBtn as='a' href='/saved'>
+                                    See Saved results
+                                </LinkBtn>
                                 </Form>
-                                <h5 style={styles.marginTop}>
-                                    <Link to='/saved'>
-                                        Saved Results
-                                    </Link>
-                                </h5>
                     </Container>
 
                 </>

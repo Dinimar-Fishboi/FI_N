@@ -2,7 +2,17 @@ import React from 'react';
 import ListGroup from 'react-bootstrap/ListGroup'
 import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components'
 
+const Button = styled.button`
+    background: green;
+    color: white;
+    margin: 0 1em;
+    padding: 0.5em 1em;
+    border-color: transparent;
+    border-radius: 5px;
+    margin-top: 1rem
+`
 
 const AddressList = ({
     addresses
@@ -20,9 +30,9 @@ const AddressList = ({
                 <Container>
                 <h3 style={styles.marginTop}> You have no saved searches yet.</h3>
                 <h5 style={styles.marginTop}>
-                                    <Link to='/search'>
+                                    <Button as='a' href='/search'>
                                         Search for an Address
-                                    </Link>
+                                    </Button>
                                 </h5>
                 </Container>
             </>
@@ -44,11 +54,10 @@ const AddressList = ({
                                 </ListGroup.Item>
                             ))}
                             </ListGroup>
-                            <h5 style={styles.marginTop}>
-                                    <Link to='/search'>
+                            <br/>
+                                    <Button as='a' href='/search' >
                                         Search for an Address
-                                    </Link>
-                                </h5>
+                                    </Button>
                         </Container>
                     </>
     )

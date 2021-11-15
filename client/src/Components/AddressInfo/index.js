@@ -3,9 +3,26 @@ import Container from 'react-bootstrap/Container';
 import { useQuery } from '@apollo/client';
 import Auth from '../../utils/auth'; 
 import {QUERY_ADDRESS} from '../../utils/queries'
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import AddressQuestions from '../AddressQuestions/index'
 import Alert from 'react-bootstrap/Alert'
+import styled from 'styled-components'
+
+const Button = styled.button`
+    color: white;
+    margin: 0 1em;
+    padding: 0.25em 1em;
+    border-radius: 5px;
+    border-color: transparent;
+`
+const DelBtn = styled(Button)`
+    background: #BF0000;
+`
+
+const BackBtn = styled(Button)`
+    background: green;
+    padding: 0.55em 1em;
+`
 
 const AddressInfo = () => {
 
@@ -30,6 +47,9 @@ const AddressInfo = () => {
         },
         bold: {
             fontWeight: 'bold',
+        },
+        whiteLink: {
+            color: 'white',
         }
     }
 
@@ -77,10 +97,12 @@ const AddressInfo = () => {
                                 inform your Retail Service Provider.
                             </p>
                     </Alert>
-                    
-                    <Link to="/saved">
+                        <BackBtn as='a' href='/saved'>
                             Back to Saved List
-                        </Link>                      
+                        </BackBtn>
+                        <DelBtn>
+                            Delete Address
+                        </DelBtn>                      
                 </Container>
 
             </>
