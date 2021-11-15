@@ -3,17 +3,9 @@ import Container from 'react-bootstrap/Container';
 import { useQuery } from '@apollo/client';
 import Auth from '../../utils/auth'; 
 import {QUERY_ADDRESS} from '../../utils/queries'
-import styled from 'styled-components'
 import { Link, useParams } from 'react-router-dom';
 import AddressQuestions from '../AddressQuestions/index'
 import Alert from 'react-bootstrap/Alert'
-
-const Button = styled.button`
-    background: green;
-    color: white;
-    margin: 0 1em;
-    padding: 0.25em 1em;
-`
 
 const AddressInfo = () => {
 
@@ -35,15 +27,22 @@ const AddressInfo = () => {
       const styles = {
         marginTop: {
             marginTop: '1rem',
+        },
+        bold: {
+            fontWeight: 'bold',
         }
     }
+
+    if (loading) {
+        return <div>Loading...</div>;
+      }
 
     return (
         <>
         {Auth.loggedIn() ? (
             <>  
                 <Container>
-                    <h1 style={styles.marginTop}>Address Information</h1>
+                    <h1 style={styles.marginTop}>Address Details</h1>
                         <p>
                             What you need to know about {userInput}:
                         </p>
@@ -58,6 +57,10 @@ const AddressInfo = () => {
                                 </li>
                                 <li>
                                     Coordinates: {latitude}, {longitude}
+                                </li>
+                                <li style={styles.bold}>
+                                    Compare the NBN address against what you have been provided by the Real Estate/Landlord. Our data is based on the NBN's data of your premises.
+                                    If there is a major difference: seek more information regarding the exact address name.
                                 </li>
                             </ul>
                         </Alert>
