@@ -21,7 +21,7 @@ const Header = () => {
         <>
             <Navbar bg="light" expand="lg">
             <Container>
-                <Navbar.Brand style={styles.greenLink} href="welcome">Fixed Internet</Navbar.Brand>
+                <Navbar.Brand style={styles.greenLink}>Fixed Internet</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">

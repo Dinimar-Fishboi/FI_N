@@ -80,7 +80,13 @@ const Search = props => {
     }
 
     if (loading) {
-        return <div>Loading...</div>;
+        return (
+            <>
+            <Container>
+                <div>Loading...</div>
+            </Container>
+            </>
+        );
       }
 
         return (

@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/client';
 import AddressList from '../AddressList/index'
 import { QUERY_ME } from '../../utils/queries';
 import Welcome from './Welcome';
-
+import Container from 'react-bootstrap/Container';
 
 import Auth from '../../utils/auth';
 
@@ -16,7 +16,13 @@ const Saved = () => {
             const addressList = user?.addresses || []
 
         if (loading) {
-            return <div>Loading...</div>;
+            return (
+                <>
+                <Container>
+                    <div>Loading...</div>
+                </Container>
+                </>
+            );
             }
 
         return (
