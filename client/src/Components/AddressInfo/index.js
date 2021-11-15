@@ -54,8 +54,16 @@ const AddressInfo = () => {
     }
 
     if (loading) {
-        return <div>Loading...</div>;
-      }
+        return (
+            <>
+            <Container>
+                <Alert variant={'info'}>
+                    <div>Loading...</div>
+                </Alert>
+            </Container>
+            </>
+        );
+        }
 
     return (
         <>
@@ -94,7 +102,7 @@ const AddressInfo = () => {
                             <p>
                                 Always ask if the place has been re-wired/renovated/rebuilt/sub-developed since the last
                                 resident had NBN service. Then ask if the NBN had been updated directly or if YOU will be required to 
-                                inform your Retail Service Provider.
+                                inform your Retail Service Provider. Please note this will incur delays.
                             </p>
                     </Alert>
                         <BackBtn as='a' href='/saved'>

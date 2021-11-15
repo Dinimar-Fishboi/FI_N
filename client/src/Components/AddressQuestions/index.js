@@ -53,7 +53,7 @@ const AddressQuestions = ({userInput, streetName, techType}) => {
                         In addition, you can review installation information and more <Link to="/gen-tech">here.</Link>
                     </li>
                     <li>
-                        Ask if the property has ever been connected to the NBN, as if not you could be charged <Link to="/ndc">New Development Charge</Link> by the NBN.
+                        Ask if the property has ever been connected to the NBN, as if not you could be charged <Link to="/ndc">New Development Charge</Link> by the NBN ($300).
                     </li>
                 </ul>
                 </Container>
@@ -79,7 +79,7 @@ const AddressQuestions = ({userInput, streetName, techType}) => {
                         <span style={styles.bold}> Ask where the Modem was connected for the previous resident/s</span>
                     </li>
                     <li>
-                        Ask if the property has ever been connected to the NBN, as if not you could be charged <Link to="/ndc">New Development Charge</Link> by the NBN.
+                        Ask if the property has ever been connected to the NBN, as if not you could be charged <Link to="/ndc">New Development Charge</Link> by the NBN ($300).
                     </li>
                 </ul>
                 </Container>
@@ -106,7 +106,7 @@ const AddressQuestions = ({userInput, streetName, techType}) => {
                         <span style={styles.bold}> If you don't see an NBN connection point, an NBN technician will need to attend the premises. Your RSP is responsible to organise this.</span>
                     </li>
                     <li>
-                        Ask if the property has ever been connected to the NBN, as if not you could be charged <Link to="/ndc">New Development Charge</Link> by the NBN.
+                        Ask if the property has ever been connected to the NBN, as if not you could be charged <Link to="/ndc">New Development Charge</Link> by the NBN ($300).
                     </li>
                 </ul>  
                 </Container>
@@ -128,7 +128,7 @@ const AddressQuestions = ({userInput, streetName, techType}) => {
                         Confirm the NTD is in the premises - if it's missing then it's likely that the property has not been connected to the NBN before or it's a new building. <Link to="/fttp">Diagrams and more information here.</Link>
                     </li>
                     <li>
-                        Ask if the property has ever been connected to the NBN, as if not you could be charged <Link to="/ndc">New Development Charge</Link> by the NBN.
+                        Ask if the property has ever been connected to the NBN, as if not you could be charged <Link to="/ndc">New Development Charge</Link> by the NBN ($300).
                     </li>
                 </ul>  
                 </Container>
@@ -153,7 +153,7 @@ const AddressQuestions = ({userInput, streetName, techType}) => {
                         This address is connected to the NBN via signal, so look for a diamond shaped satellite on the roof.
                     </li>
                     <li>
-                        Ask if the property has ever been connected to the NBN, as if not you could be charged <Link to="/ndc">New Development Charge</Link> by the NBN.
+                        Ask if the property has ever been connected to the NBN, as if not you could be charged <Link to="/ndc">New Development Charge</Link> by the NBN ($300).
                     </li>
                 </ul>  
                 </Container>
@@ -177,7 +177,7 @@ const AddressQuestions = ({userInput, streetName, techType}) => {
                         This address is connected to the NBN via signal, so look for a diamond shaped satellite on the roof.
                     </li>
                     <li>
-                        Ask if the property has ever been connected to the NBN, as if not you could be charged <Link to="/ndc">New Development Charge</Link> by the NBN.
+                        Ask if the property has ever been connected to the NBN, as if not you could be charged <Link to="/ndc">New Development Charge</Link> by the NBN ($300).
                     </li>
                 </ul>  
                 </Container>
@@ -189,7 +189,7 @@ const AddressQuestions = ({userInput, streetName, techType}) => {
         <>
             <Container>
             <p>
-                Default
+                Default - Something has gone wrong.
             </p>
             </Container>
         </>

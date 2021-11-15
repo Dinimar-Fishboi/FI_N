@@ -20,7 +20,9 @@ const Saved = () => {
             return (
                 <>
                 <Container>
-                    <div>Loading...</div>
+                    <Alert variant={'info'}>
+                        <div>Loading...</div>
+                    </Alert>
                 </Container>
                 </>
             );

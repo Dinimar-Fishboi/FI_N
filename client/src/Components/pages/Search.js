@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { useLazyQuery } from "@apollo/client";
 import Welcome from './Welcome';
+import Alert from 'react-bootstrap/Alert'
 
 import Auth from '../../utils/auth'; 
 
@@ -86,11 +87,13 @@ const Search = props => {
         return (
             <>
             <Container>
-                <div>Loading...</div>
+                <Alert variant={'info'}>
+                    <div>Loading...</div>
+                </Alert>
             </Container>
             </>
         );
-      }
+        }
 
         return (
             <>
