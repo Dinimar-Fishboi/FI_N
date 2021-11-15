@@ -1,11 +1,7 @@
-import React, { useState } from 'react';
-import { Redirect, useParams } from 'react-router-dom';
+import React from 'react';
 import { useQuery } from '@apollo/client';
-import ListGroup from 'react-bootstrap/ListGroup'
-import Container from 'react-bootstrap/Container';
 import AddressList from '../AddressList/index'
-// import { SAVE_ADDRESS, REMOVE_ADDRESS} from '../../utils/mutations'
-import { QUERY_ME, QUERY_USER } from '../../utils/queries';
+import { QUERY_ME } from '../../utils/queries';
 import Welcome from './Welcome';
 
 
@@ -18,6 +14,10 @@ const Saved = () => {
   
             const user = data?.me 
             const addressList = user?.addresses || []
+
+        if (loading) {
+            return <div>Loading...</div>;
+            }
 
         return (
             <>

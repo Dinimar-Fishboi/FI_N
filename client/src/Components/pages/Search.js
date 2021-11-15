@@ -79,6 +79,10 @@ const Search = props => {
         console.log(addressString)
     }
 
+    if (loading) {
+        return <div>Loading...</div>;
+      }
+
         return (
             <>
                 {Auth.loggedIn() ? (

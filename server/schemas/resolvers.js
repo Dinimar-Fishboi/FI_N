@@ -11,17 +11,11 @@ const resolvers = {
           user: async (parent, { username }) => {
             return User.findOne({ username }).populate('addresses');
           },
-          // addresses: async (parent, { username }) => {
-          //   const params = username ? { username } : {};
-          //   return Address.find(params);
-          // },
           address: async (parent, { addressId }, args) => {
             return Address.findOne({ _id: addressId });
           },
           searchAddress: async (parent, args, context) => {
-            const addressObject = await requestNBNTypeCheck(args.address)
-            // console.log(addressObject)   
-            // console.log(args)        
+            const addressObject = await requestNBNTypeCheck(args.address)        
             const address = await Address.create({
               userInput: args.address,
               streetName: addressObject.addressDetail.formattedAddress,

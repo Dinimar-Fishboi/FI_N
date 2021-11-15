@@ -1,12 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import Search from './pages/Search'
-// import Login from './pages/Login'
-// import Signup from './pages/Signup'
-// import Saved from './pages/Saved'
-// import Welcome from './pages/Welcome'
-// import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import styled from 'styled-components'
 import {Navbar, Nav, Container} from 'react-bootstrap'
 
 import Auth from '../utils/auth'
