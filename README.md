@@ -26,7 +26,8 @@ Having reliable Internet and landline services is crucial for those who are medi
 - Full MERN stack
 - JWT
 - Axios
-
+- Styled Components
+- Bootstrap
 
 ## Installation
 
