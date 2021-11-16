@@ -13,10 +13,20 @@ const Button = styled.button`
     border-radius: 5px;
     margin-top: 1rem
 `
+const ReloadButton = styled(Button)`
+    background: #0d6efd;
+    padding: 0.2em 1em;
+
+`
 
 const AddressList = ({
     addresses
     }) => {
+
+    const pageReload = async (e) => {
+        e.preventDefault();
+        window.location.reload()
+    }
 
     const styles = {
         marginTop: {
@@ -58,6 +68,9 @@ const AddressList = ({
                                     <Button as='a' href='/search' >
                                         Search for an Address
                                     </Button>
+                                    <ReloadButton type='click' onClick={pageReload}>
+                                        Reload Page
+                                    </ReloadButton>
                         </Container>
                     </>
     )
