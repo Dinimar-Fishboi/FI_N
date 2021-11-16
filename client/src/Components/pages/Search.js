@@ -87,6 +87,7 @@ const Search = props => {
         return (
             <>
             <Container>
+                <br/>
                 <Alert variant={'info'}>
                     <div>Loading...</div>
                 </Alert>
