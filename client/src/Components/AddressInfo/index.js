@@ -10,6 +10,7 @@ import AddressChecklist from '../AddressChecklist/index'
 import Alert from 'react-bootstrap/Alert'
 import styled from 'styled-components'
 import Welcome from '../pages/Welcome';
+import Basic from './Basic';
 
 const Button = styled.button`
     color: white;
@@ -59,6 +60,9 @@ const AddressInfo = () => {
             await removeAddress({
                 variables: {...addressId},
             })
+        
+        console.log("address has been deleted")
+
         } catch (e) {
             console.error(e);
         }  
@@ -82,28 +86,13 @@ const AddressInfo = () => {
         {Auth.loggedIn() ? (
             <>  
                 <Container>
-                    <h1 style={{marginTop: '1rem'}}>Address Details</h1>
-                        <p>
-                            What you need to know about {userInput}:
-                        </p>
-                        <Alert variant={'primary'}>
-                            <h5>Basic info</h5>
-                            <ul>
-                                <li>
-                                    NBN address for property: {streetName}
-                                </li>
-                                <li>
-                                    Technology type for property: {techType}
-                                </li>
-                                <li>
-                                    Coordinates: {latitude}, {longitude}
-                                </li>
-                                <li style={{ fontWeight: 'bold'}}>
-                                    Compare the NBN address against what you have been provided by the Real Estate/Landlord. Our data is based on the NBN's data of your premises.
-                                    If there is a major difference: seek more information regarding the exact address name.
-                                </li>
-                            </ul>
-                        </Alert>
+                    <Basic
+                    userInput ={address.userInput}
+                    streetName ={address.streetName}
+                    techType ={address.techType}
+                    latitude = {address.latitude}
+                    longitude = {address.longitude}
+                    />
                     <AddressQuestions
                         userInput ={address.userInput}
                         streetName ={address.streetName}
