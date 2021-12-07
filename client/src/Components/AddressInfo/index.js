@@ -6,7 +6,7 @@ import {QUERY_ADDRESS} from '../../utils/queries'
 import {REMOVE_ADDRESS} from '../../utils/mutations'
 import { useParams } from 'react-router-dom';
 import AddressQuestions from '../AddressQuestions/index'
-import AddressChecklist from '../AddressChecklist/index'
+import Checklist from './Checklist'
 import Alert from 'react-bootstrap/Alert'
 import styled from 'styled-components'
 import Welcome from '../pages/Welcome';
@@ -18,6 +18,9 @@ const Button = styled.button`
     padding: 0.25em 1em;
     border-radius: 5px;
     border-color: transparent;
+        &:hover{
+            color: yellow;
+        }
 `
 const DelBtn = styled(Button)`
     background: #BF0000;
@@ -26,10 +29,6 @@ const DelBtn = styled(Button)`
 const BackBtn = styled(Button)`
     background: green;
     padding: 0.55em 1em;
-`
-
-const CheckBtn = styled(Button)`
-    background: #0d6efd;
 `
 
 const AddressInfo = () => {
@@ -41,13 +40,7 @@ const AddressInfo = () => {
         variables: { addressId: addressId },
       });
 
-      const address = data?.address || {};
-
-      const userInput = (address.userInput)
-      const streetName = (address.streetName)
-      const techType = (address.techType)
-      const latitude = (address.latitude)
-      const longitude = (address.longitude)
+    const address = data?.address || {};
 
     const [ removeAddress, {error}] = useMutation(REMOVE_ADDRESS, {
         variables: {addressId: addressId}
@@ -97,26 +90,15 @@ const AddressInfo = () => {
                         userInput ={address.userInput}
                         streetName ={address.streetName}
                         techType ={address.techType}
-                        />
-                    {/* <Alert variant={'danger'}>
-                        <h5>IMPORTANT</h5>
-                            <p>
-                                Always ask if the place has been re-wired/renovated/rebuilt/sub-developed since the last
-                                resident had NBN service. Then ask if the NBN had been updated directly or if YOU will be required to 
-                                inform your Retail Service Provider. Please note this will incur delays.
-                            </p>
-                    </Alert> */}
+                    />
                         <BackBtn as='a' href='/saved'>
                             Back to Saved List
                         </BackBtn>
                         <DelBtn onClick={delAddress}>
                             Delete Address
                         </DelBtn>
-                        <CheckBtn>
-                            View Checklist    
-                        </CheckBtn>
                 </Container>
-                <AddressChecklist 
+                <Checklist 
                     userInput ={address.userInput}
                     streetName ={address.streetName}
                     techType ={address.techType}
@@ -127,7 +109,6 @@ const AddressInfo = () => {
                 <Welcome/>
             </>
         )}
-
         </>
     )
 }
