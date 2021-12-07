@@ -11,7 +11,10 @@ const Button = styled.button`
     padding: 0.5em 1em;
     border-color: transparent;
     border-radius: 5px;
-    margin-top: 1rem
+    margin-top: 1rem;
+    &:hover{
+        color: yellow;
+    }
 `
 const ReloadButton = styled(Button)`
     background: #0d6efd;
@@ -53,7 +56,7 @@ const AddressList = ({
         <>
                         <Container>
                             <h1 style={styles.marginTop}>Recent searches</h1>
-                            <ListGroup variant="flush">
+                            <ListGroup variant="flush" >
                             {addresses.map((address) => (
                                 <ListGroup.Item key={address._id}>
                                               <Link to={{

@@ -49,7 +49,7 @@ const Inquire = ({ inqArray}) => {
                     <Li key={item.id}>
                         {item.inq}
                         <Button onClick={handleChange} value={item.warning}>
-                            No
+                            {item.button}
                         </Button>
                         
                     </Li>

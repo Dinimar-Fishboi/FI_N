@@ -8,17 +8,20 @@ const Checklist = ({userInput, streetName, techType}) => {
         {
             id: 1,
             inq: "Has the property ever been connected to the NBN network before?",
-            warning: "You are likely going to be charged a New Development Charge. See above for details."
+            warning: "You are likely going to be charged a New Development Charge. See above for details.",
+            button: "No"
         },
         {
             id: 2,
             inq: "Has the property been recently subdivided?",
-            warning: "Ask if the NBN connection was part of the property that you are inspecting. If not, new infrastructure will need to be installed and you could be charged the New Development Charge."
+            warning: "Ask if the NBN connection was part of the property that you are inspecting. If not, new infrastructure will need to be installed and you could be charged the New Development Charge.",
+            button: "Yes"
         },
         {
             id: 3,
             inq: "Have there been any recent renovations that change the internal wiring?",
-            warning: "If the NBN line was removed, then the NBN will need to reinstall it. You will need to provide the contact details of the persons/company that changed the internal wiring to your Retail Provider, for them to pass on to the NBN."
+            warning: "If the NBN line was removed, then the NBN will need to reinstall it. You will need to provide the contact details of the persons/company that changed the internal wiring to your Retail Provider, for them to pass on to the NBN.",
+            button: "Yes"
         }    
     ]
 

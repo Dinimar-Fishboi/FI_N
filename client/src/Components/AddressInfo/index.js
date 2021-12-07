@@ -14,7 +14,7 @@ import Basic from './Basic';
 
 const Button = styled.button`
     color: white;
-    margin: 0 1em;
+    margin:  1em;
     padding: 0.25em 1em;
     border-radius: 5px;
     border-color: transparent;
@@ -92,6 +92,11 @@ const AddressInfo = () => {
                         streetName ={address.streetName}
                         techType ={address.techType}
                     />
+                    <Checklist
+                    userInput ={address.userInput}
+                    streetName ={address.streetName}
+                    techType ={address.techType}
+                    />  
                         <BackBtn as='a' href='/saved'>
                             Back to Saved List
                         </BackBtn>
@@ -99,11 +104,7 @@ const AddressInfo = () => {
                             Delete Address
                         </DelBtn>
                 </Container>
-                <Checklist 
-                    userInput ={address.userInput}
-                    streetName ={address.streetName}
-                    techType ={address.techType}
-                />                      
+                                    
             </>
         ) : (
             <>
