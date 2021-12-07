@@ -5,8 +5,10 @@ import Auth from '../../utils/auth';
 import {QUERY_ADDRESS} from '../../utils/queries'
 import { useParams } from 'react-router-dom';
 import AddressQuestions from '../AddressQuestions/index'
+import AddressChecklist from '../AddressChecklist/index'
 import Alert from 'react-bootstrap/Alert'
 import styled from 'styled-components'
+import Welcome from '../pages/Welcome';
 
 const Button = styled.button`
     color: white;
@@ -22,6 +24,10 @@ const DelBtn = styled(Button)`
 const BackBtn = styled(Button)`
     background: green;
     padding: 0.55em 1em;
+`
+
+const CheckBtn = styled(Button)`
+    background: #0d6efd;
 `
 
 const AddressInfo = () => {
@@ -111,13 +117,21 @@ const AddressInfo = () => {
                         </BackBtn>
                         <DelBtn>
                             Delete Address
-                        </DelBtn>                      
+                        </DelBtn>
+                        <CheckBtn>
+                            View Checklist    
+                        </CheckBtn>
                 </Container>
+                <AddressChecklist 
+                    userInput ={address.userInput}
+                    streetName ={address.streetName}
+                    techType ={address.techType}
+                />                      
 
             </>
         ) : (
             <>
-
+                <Welcome/>
             </>
         )}
 

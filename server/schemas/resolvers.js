@@ -93,13 +93,13 @@ const resolvers = {
           throw new AuthenticationError('You need to be logged in!');
 
         },
-        removeAddress: async (parent, {addressId}, constext) => {
+        removeAddress: async (parent, {addressId}, context) => {
               if (context.user) {
                 const address = await Address.findOneAndDelete({
                   _id: addressId,
                 })
                 
-                  await User.findbyIdAndUpdate(
+                  await User.findOneAndUpdate(
                     { _id: context.user._id },
                     { $pull: { addresses: address._id } },
                   )
