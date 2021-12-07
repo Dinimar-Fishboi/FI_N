@@ -40,12 +40,6 @@ const Search = props => {
         variables:  { address: addressString},
       });
 
-      const styles = {
-          marginTop: {
-              marginTop: '1rem',
-          }
-      }
-
     const [addressOne, setAddressOne] = useState('')
     const [addressTwo, setAddressTwo] = useState('');
     const [suburb, setSuburb] = useState('');
@@ -104,7 +98,7 @@ const Search = props => {
                 {Auth.loggedIn() ? (
                     <>
                         <Container>
-                        <h1 style={styles.marginTop}>Search Address</h1>
+                        <h1 style={{marginTop: '1rem'}}>Search Address</h1>
 
                             <Form onSubmit={updateAddress}>
                                 <Form.Group className="mb-3" controlId="formGridAddress1">

@@ -19,7 +19,6 @@ const Button = styled.button`
 `
 
 const Hush = styled.p`
-    // display: ${props => props.inputDisplay};
     background-color: #BF0000;
     color: white;
     margin-top: 1em;
@@ -29,7 +28,7 @@ const Hush = styled.p`
     border-color: transparent;    
 `
 
-const Inquire = ({userInput, streetName, techType, inqArray}) => {
+const Inquire = ({ inqArray}) => {
 
     const [inputDisplay, setInputDisaply] = useState("none")
     const [msgWarning, setMsgWarning] = useState("")

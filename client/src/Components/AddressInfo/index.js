@@ -55,6 +55,7 @@ const AddressInfo = () => {
             })
         
         console.log("address has been deleted")
+        window.location.href ='/delete';
 
         } catch (e) {
             console.error(e);

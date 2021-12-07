@@ -60,6 +60,11 @@ const Footer = () => {
                             )
                             
                         }
+                        <Nav.Link href="github">
+                            <Link to='/github' style={styles.greenLink}>
+                                Developer Info
+                            </Link>
+                        </Nav.Link> 
                         </Navbar>
                     </Nav>
             </Container>

@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Alert from 'react-bootstrap/Alert'
 import { Link } from 'react-router-dom';
 
-const AddressQuestions = ({userInput, streetName, techType}) => {
+const AddressQuestions = ({ streetName, techType}) => {
 
     const styles = {
         bold: {

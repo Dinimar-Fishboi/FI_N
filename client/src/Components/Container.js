@@ -6,6 +6,7 @@ import Search from './pages/Search'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Saved from './pages/Saved'
+import Delete from './pages/Delete'
 import Welcome from './pages/Welcome'
 import AddressInfo from './AddressInfo/index'
 
@@ -24,6 +25,7 @@ export default function Container() {
                     <Route exact path="/signup" component={Signup}/>
                     <Route exact path="/saved" component={Saved}/>
                     <Route exact path='/saved/:addressId' component={AddressInfo}/>
+                    <Route exact path='/delete' component={Delete}/>
                     <Route exact path="/welcome" component={Welcome}/>
                     <Route exact path="/ndc" component={() => {
                         window.location.href = "https://www.nbnco.com.au/develop-or-plan-with-the-nbn/new-developments/government-policy-for-new-developments";
@@ -55,6 +57,10 @@ export default function Container() {
                     }}/>
                     <Route exact path="/satellite" component={() => {
                         window.location.href = "https://www.nbnco.com.au/learn/network-technology/sky-muster-explained";
+                        return null;
+                    }}/>
+                    <Route exact path="/github" component={() => {
+                        window.location.href = "https://github.com/Dinimar-Fishboi/FI_N";
                         return null;
                     }}/>
                 </Switch>
