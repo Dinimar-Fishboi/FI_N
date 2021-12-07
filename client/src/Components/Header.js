@@ -12,14 +12,17 @@ const Header = () => {
 
     const styles = {
         greenLink: {
-            color: 'green',
+            color: 'white',
             textDecoration: 'underline',
+        },
+        gradient: {
+            background: 'linear-gradient(to right, #4D9DE0, blue)'
         }
     }
 
     return (
         <>
-            <Navbar bg="light" expand="lg">
+            <Navbar style={styles.gradient} expand="lg">
             <Container>
                 <Navbar.Brand style={styles.greenLink}>Fixed Internet</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -59,6 +62,11 @@ const Header = () => {
                     )
                     
                 }
+                    <Nav.Link href="more">
+                        <Link to='/more' style={styles.greenLink}>
+                            About
+                        </Link>
+                    </Nav.Link> 
                 </Nav>
                 </Navbar.Collapse>
             </Container>

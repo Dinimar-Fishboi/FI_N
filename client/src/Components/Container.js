@@ -4,6 +4,7 @@ import Header from './Header'
 import Footer from './Footer'
 import Search from './pages/Search'
 import Login from './pages/Login'
+import More from './pages/More'
 import Signup from './pages/Signup'
 import Saved from './pages/Saved'
 import Delete from './pages/Delete'
@@ -20,6 +21,7 @@ export default function Container() {
                 <Header/>
                 <Switch>
                     <Route exact path="/" component={Search}/>
+                    <Route exact path="/more" component={More}/>
                     <Route exact path="/search" component={Search}/>
                     <Route exact path="/login" component={Login}/>
                     <Route exact path="/signup" component={Signup}/>

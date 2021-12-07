@@ -13,8 +13,11 @@ const Footer = () => {
 
     const styles = {
         greenLink: {
-            color: 'green',
+            color: '#009DDC ',
             textDecoration: 'underline',
+        },
+        gradient: {
+            background: 'linear-gradient(to right,blue, #4D9DE0)'
         }
     }
 
@@ -60,9 +63,14 @@ const Footer = () => {
                             )
                             
                         }
+                        <Nav.Link href="more">
+                            <Link to='/more' style={styles.greenLink}>
+                                About
+                            </Link>
+                        </Nav.Link> 
                         <Nav.Link href="github">
                             <Link to='/github' style={styles.greenLink}>
-                                Developer Info
+                                Project Repository
                             </Link>
                         </Nav.Link> 
                         </Navbar>
