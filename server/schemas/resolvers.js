@@ -103,6 +103,8 @@ const resolvers = {
                     { _id: context.user._id },
                     { $pull: { addresses: address._id } },
                   )
+
+                  console.log("address has now been deleted")
                   return address;
               }
               throw new AuthenticationError('You need to be logged in!');
