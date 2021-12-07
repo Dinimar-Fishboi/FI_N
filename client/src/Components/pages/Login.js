@@ -9,10 +9,15 @@ import Auth from '../../utils/auth';
 import styled from 'styled-components'
 
 const Button = styled.button`
-    background: green;
-    color: white;
-    margin: 0 1em;
-    padding: 0.25em 1em;
+  color: white;
+  background: green;
+  margin: 0 1em;
+  padding: 0.25em 1em;
+  border-color: transparent;
+  border-radius: 5px;
+      &:hover{
+          color: yellow;
+      }
 `
 
 const Login = (props) => {

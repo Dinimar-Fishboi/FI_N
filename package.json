@@ -14,5 +14,10 @@
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "animate.css-react": "^1.1.0",
+    "react-notifications-component": "^3.1.0"
   }
 }

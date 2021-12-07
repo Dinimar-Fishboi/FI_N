@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'animate.css'
+import 'react-notifications-component/dist/theme.css'
 
 ReactDOM.render(
   <React.StrictMode>

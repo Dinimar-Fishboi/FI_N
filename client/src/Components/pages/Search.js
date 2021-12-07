@@ -17,7 +17,10 @@ const Button = styled.button`
     margin: 0 1em;
     padding: 0.25em 1em;
     border-color: transparent;
-    border-radius: 5px
+    border-radius: 5px;
+        &:hover{
+            color: yellow;
+        }
 `
 const SubmitBtn = styled(Button)`
     background: green;

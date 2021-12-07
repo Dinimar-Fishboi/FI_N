@@ -14,12 +14,6 @@ const AddressQuestions = ({userInput, streetName, techType}) => {
         },
     }
 
-    console.log(`
-            userInput: ${userInput}
-            streetName: ${streetName}
-            techType: ${techType}
-        `)
-
     if (!streetName) {
         return (
             <>
