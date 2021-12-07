@@ -7,7 +7,7 @@ const Delete = () => {
         <>
             <Container>
                 <h1 style={{marginTop: '1rem'}}>
-                    You have successfully removed that address from your Saved list.
+                    You have successfully removed that address.
                 </h1>
                 <h3>
                     Glad to have helped!

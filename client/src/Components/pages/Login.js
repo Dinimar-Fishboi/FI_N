@@ -3,7 +3,6 @@ import  Form from 'react-bootstrap/Form'
 import Container from 'react-bootstrap/Container';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../utils/mutations';
-
 import Auth from '../../utils/auth';
 
 import styled from 'styled-components'
@@ -21,12 +20,6 @@ const Button = styled.button`
 `
 
 const Login = (props) => {
-
-  const styles = {
-        marginTop: {
-            marginTop: '1rem',
-        }
-    }
 
     const [formState, setFormState] = useState({ email: '', password: '' });
     const [login, { error, data }] = useMutation(LOGIN_USER);
@@ -65,7 +58,7 @@ const Login = (props) => {
     return(
         <>
             <Container>
-            <h1 style={styles.marginTop}>Login</h1>
+            <h1 style={{marginTop: "1rem"}}>Login</h1>
                 <Form onSubmit={handleFormSubmit}>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>Email </Form.Label>

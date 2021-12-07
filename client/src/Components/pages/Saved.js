@@ -33,7 +33,7 @@ const Saved = () => {
             <>
                 {Auth.loggedIn() ? (
                     <>
-                        <Container>
+                        <Container style={{backgroundColorz: "#61dafb"}}>
                             <br/>
                             <Alert variant={'warning'}>
                                 <p>
