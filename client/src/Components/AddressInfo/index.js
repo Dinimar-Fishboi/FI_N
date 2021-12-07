@@ -1,8 +1,9 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container';
-import { useQuery } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
 import Auth from '../../utils/auth'; 
 import {QUERY_ADDRESS} from '../../utils/queries'
+import {REMOVE_ADDRESS} from '../../utils/mutations'
 import { useParams } from 'react-router-dom';
 import AddressQuestions from '../AddressQuestions/index'
 import AddressChecklist from '../AddressChecklist/index'
@@ -47,16 +48,20 @@ const AddressInfo = () => {
       const latitude = (address.latitude)
       const longitude = (address.longitude)
 
-      const styles = {
-        marginTop: {
-            marginTop: '1rem',
-        },
-        bold: {
-            fontWeight: 'bold',
-        },
-        whiteLink: {
-            color: 'white',
-        }
+    const [ removeAddress, {error}] = useMutation(REMOVE_ADDRESS, {
+        variables: {addressId: addressId}
+    })
+
+    const delAddress = async (e) => {
+        e.preventDefault();
+        console.log("Attempting to delete address")
+        try {
+            await removeAddress({
+                variables: {...addressId},
+            })
+        } catch (e) {
+            console.error(e);
+        }  
     }
 
     if (loading) {
@@ -77,7 +82,7 @@ const AddressInfo = () => {
         {Auth.loggedIn() ? (
             <>  
                 <Container>
-                    <h1 style={styles.marginTop}>Address Details</h1>
+                    <h1 style={{marginTop: '1rem'}}>Address Details</h1>
                         <p>
                             What you need to know about {userInput}:
                         </p>
@@ -93,7 +98,7 @@ const AddressInfo = () => {
                                 <li>
                                     Coordinates: {latitude}, {longitude}
                                 </li>
-                                <li style={styles.bold}>
+                                <li style={{ fontWeight: 'bold'}}>
                                     Compare the NBN address against what you have been provided by the Real Estate/Landlord. Our data is based on the NBN's data of your premises.
                                     If there is a major difference: seek more information regarding the exact address name.
                                 </li>
@@ -104,18 +109,18 @@ const AddressInfo = () => {
                         streetName ={address.streetName}
                         techType ={address.techType}
                         />
-                    <Alert variant={'danger'}>
+                    {/* <Alert variant={'danger'}>
                         <h5>IMPORTANT</h5>
                             <p>
                                 Always ask if the place has been re-wired/renovated/rebuilt/sub-developed since the last
                                 resident had NBN service. Then ask if the NBN had been updated directly or if YOU will be required to 
                                 inform your Retail Service Provider. Please note this will incur delays.
                             </p>
-                    </Alert>
+                    </Alert> */}
                         <BackBtn as='a' href='/saved'>
                             Back to Saved List
                         </BackBtn>
-                        <DelBtn>
+                        <DelBtn onClick={delAddress}>
                             Delete Address
                         </DelBtn>
                         <CheckBtn>
@@ -127,7 +132,6 @@ const AddressInfo = () => {
                     streetName ={address.streetName}
                     techType ={address.techType}
                 />                      
-
             </>
         ) : (
             <>

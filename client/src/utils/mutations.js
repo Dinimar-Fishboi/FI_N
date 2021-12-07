@@ -37,13 +37,14 @@ mutation saveAddress($searchAddress: String!, $addressData: AddressInput!){
 `;
 
 export const REMOVE_ADDRESS = gql`
-mutation removeAddress($id: ID!){
-    removeAddress(addressId: $id){
-        addressId
-        streetName
-        techType
-        latitude
-        longitude
-    }
+mutation removeAddress( $addressId: ID!){
+  removeAddress(addressId: $addressId) {
+    userInput
+    streetName
+    techType
+    latitude
+    longitude
+    _id
+  }
 }
 `;
