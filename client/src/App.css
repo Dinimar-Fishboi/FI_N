@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  background-image: url("https://unsplash.com/photos/75xPHEQBmvA");
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 .App-logo {
@@ -36,3 +42,16 @@
     transform: rotate(360deg);
   }
 }
+
+html, body, #app, #app>div { 
+  font-family: 'Courier Prime', monospace;
+  /* height: 100%;
+  background-image: url(./utils/hexagon.png);
+  background-image: url("https://unsplash.com/photos/75xPHEQBmvA");
+  background-color: #61dafb;
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover; 
+  background-position: top;   */
+ }
