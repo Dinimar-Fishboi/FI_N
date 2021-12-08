@@ -4,7 +4,6 @@ import Header from './Header'
 import Footer from './Footer'
 import Search from './pages/Search'
 import Login from './pages/Login'
-import More from './pages/More'
 import Signup from './pages/Signup'
 import Saved from './pages/Saved'
 import Delete from './pages/Delete'
@@ -21,7 +20,7 @@ export default function Container() {
                 <Header/>
                 <Switch>
                     <Route exact path="/" component={Search}/>
-                    <Route exact path="/more" component={More}/>
+                    <Route exact path="/more" component={Welcome}/>
                     <Route exact path="/search" component={Search}/>
                     <Route exact path="/login" component={Login}/>
                     <Route exact path="/signup" component={Signup}/>
@@ -29,6 +28,14 @@ export default function Container() {
                     <Route exact path='/saved/:addressId' component={AddressInfo}/>
                     <Route exact path='/delete' component={Delete}/>
                     <Route exact path="/welcome" component={Welcome}/>
+                    <Route exact path="/tio" component={() => {
+                        window.location.href = "https://www.tio.com.au/reports";
+                        return null;
+                    }}/>
+                    <Route exact path="/nbn" component={() => {
+                        window.location.href = "https://www.nbnco.com.au/corporate-information/about-nbn-co";
+                        return null;
+                    }}/>
                     <Route exact path="/ndc" component={() => {
                         window.location.href = "https://www.nbnco.com.au/develop-or-plan-with-the-nbn/new-developments/government-policy-for-new-developments";
                         return null;
