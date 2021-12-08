@@ -19,7 +19,6 @@ const Button = styled.button`
 const ReloadButton = styled(Button)`
     background: #0d6efd;
     padding: 0.2em 1em;
-
 `
 
 const AddressList = ({
@@ -31,22 +30,19 @@ const AddressList = ({
         window.location.reload()
     }
 
-    const styles = {
-        marginTop: {
-            marginTop: '1rem',
-        }
-    }
-
     if (!addresses.length) {
         return (
             <>
                 <Container>
-                <h3 style={styles.marginTop}> You have no saved searches yet.</h3>
-                <h5 style={styles.marginTop}>
-                                    <Button as='a' href='/search'>
-                                        Search for an Address
-                                    </Button>
-                                </h5>
+                <h3 style={{marginTop: "1rem"}}> You have no saved searches yet.</h3>
+                <div style={{marginTop: "1rem"}}>
+                    <Button as='a' href='/search'>
+                        Search for an Address
+                    </Button>
+                    <ReloadButton type='click' onClick={pageReload}>
+                        Reload Page
+                    </ReloadButton>
+                </div>
                 </Container>
             </>
         )
@@ -55,7 +51,7 @@ const AddressList = ({
     return (
         <>
                         <Container>
-                            <h1 style={styles.marginTop}>Recent searches</h1>
+                            <h1 style={{marginTop: "1rem"}}>Recent searches</h1>
                             <ListGroup variant="flush" >
                             {addresses.map((address) => (
                                 <ListGroup.Item key={address._id}>
