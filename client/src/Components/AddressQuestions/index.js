@@ -112,7 +112,7 @@ const AddressQuestions = ({ streetName, techType}) => {
         )
     }
 
-    if (techType === 'FIBRE') {
+    if (techType === 'FTTP') {
         return (
             <>
                 <Container>
