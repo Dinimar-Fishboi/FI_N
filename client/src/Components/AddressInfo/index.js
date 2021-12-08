@@ -101,7 +101,7 @@ const AddressInfo = () => {
                             Back to Saved List
                         </BackBtn>
                         <DelBtn onClick={delAddress}>
-                            Delete Address
+                            Remove Address
                         </DelBtn>
                 </Container>
                                     

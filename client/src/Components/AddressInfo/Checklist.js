@@ -32,7 +32,7 @@ const Checklist = ({userInput, streetName, techType}) => {
                     Checklist for property
                 </h2>
                 <p>
-                    Below are some questions you may want to ask the realtor. 
+                    Below are some questions you may want to ask the realtor. Please note that if you need to click on a red button, you will likely need a technician to visit the property to install the NBN in person.
                 </p>
                 <Inquire 
                     userInput ={userInput}

@@ -45,13 +45,13 @@ const AddressQuestions = ({ streetName, techType}) => {
                 <ul>
                     <li>
                         Only 1 socket in the premises will be connected to the NBN infrastructure. 
-                        <span style={styles.bold}> Ask where the Modem was connected for the previous resident/s</span>
-                    </li>
-                    <li>
-                        In addition, you can review installation information and more <Link to="/gen-tech">here.</Link>
+                        <span style={styles.bold}> Ask where the Modem was connected for the previous resident/s</span>. The NBN actually doesn't keep this information in their database and you will either need to find the socket yourself or a tech will need to come out to resolve the issue.
                     </li>
                     <li>
                         Ask if the property has ever been connected to the NBN, as if not you could be charged the <Link to="/ndc">New Development Charge</Link> by the NBN ($300).
+                    </li>
+                    <li>
+                        We recommend reviewing installation information <Link to="/gen-tech">here.</Link>
                     </li>
                 </ul>
                 </Container>
