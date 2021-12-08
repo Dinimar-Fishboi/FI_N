@@ -43,7 +43,7 @@
   }
 }
 
-html, body, #app, #app>div { 
+/* html, body, #app, #app>div { 
   font-family: 'Courier Prime', monospace;
   /* height: 100%;
   background-image: url(./utils/hexagon.png);
@@ -54,4 +54,4 @@ html, body, #app, #app>div {
   min-height: 100%;
   background-size: cover; 
   background-position: top;   */
- }
+ 
