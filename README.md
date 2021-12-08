@@ -14,6 +14,9 @@ Having reliable Internet and landline services is crucial for those who are medi
 
 [LIVE SITE](https://fixed-internet.herokuapp.com/)
 
+<img width="811" alt="Screen Shot 2021-11-16 at 16 50 19" src="https://user-images.githubusercontent.com/83541287/141935624-a4e8365f-8268-4594-a62d-9ccc7b9d103c.png">
+
+<img width="1346" alt="Screen Shot 2021-11-16 at 16 50 55" src="https://user-images.githubusercontent.com/83541287/141935696-a5af702a-0a62-4d3f-a955-b7c4a07bc155.png">
 
 ## Table of Contents 
 - [Technologies](#technologies)
